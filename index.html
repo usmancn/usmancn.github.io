@@ -1,59 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
+
 <head>
     <meta charset="UTF-8">
-    <title>Ana Sayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Temel Ödevi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>Hacı Osman Cingöz</h1>
-        <p>Bilgisayar Mühendisliği | Web Programlama Öğrencisi</p>
-    </header>
-
+    <!-- Üst Menü: ul > li > a yapısı -->
     <nav>
+        <span class="logo">CSS Temel Ödevi</span>
         <ul>
             <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="contact.html">İletişim</a></li>
+            <li><a href="hakkinda.html">Hakkında</a></li>
+            <li><a href="hizmetler.html">Hizmetler</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
         </ul>
     </nav>
 
-    <main>
-        <h2>Hoş Geldiniz</h2>
-        <p>Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış <strong>örnek bir kişisel tanıtım sayfasıdır</strong>.</p>
-        <p>Amaç, HTML'in temel etiketlerini ve sayfa yapısını öğrenmektir.</p>
-        <p>Daha fazla bilgi için <a href="about.html"><em>Hakkımda</em></a> sayfasını ziyaret edebilirsiniz.</p>
+    <!-- Header Alanı -->
+    <header>
+        <h1>Verilen benzer bir düzenle basit bir web sayfası oluşturun.</h1>
+        <p>CSS'in temel özelliklerini (<a href="https://developer.mozilla.org/tr/docs/Web/CSS/display"
+                target="_blank">display</a>, <a href="https://developer.mozilla.org/tr/docs/Web/CSS/width"
+                target="_blank">width</a>, <a href="https://developer.mozilla.org/tr/docs/Web/CSS/height"
+                target="_blank">height</a>, <a href="https://developer.mozilla.org/tr/docs/Web/CSS/margin"
+                target="_blank">margin</a>, <a href="https://developer.mozilla.org/tr/docs/Web/CSS/padding"
+                target="_blank">padding</a>,
+            <a href="https://developer.mozilla.org/tr/docs/Web/CSS/border" target="_blank">border</a>, <a
+                href="https://developer.mozilla.org/tr/docs/Web/CSS/CSS_selectors" target="_blank">selector</a>)
+            uygulayın. Sadece HTML5 + CSS3 kullanın, hazır framework kullanmak yasak
+            (Bootstrap, Tailwind vb.).
+        </p>
+    </header>
 
-        <h2 id="hedef">Hızlı Bilgiler</h2>
-        <ul>
-            <li>Üniversite: Marmara Üniversitesi</li>
-            <li>Bölüm: Bilgisayar Mühendisliği</li>
-            <li>İlgi Alanı: Web Teknolojileri</li>
-        </ul>
+    <!-- İki Sütunlu İçerik Alanı -->
+    <div class="content">
+        <!-- Sol: İçerik -->
+        <main>
+            <h2>İçerik</h2>
+            <p>Bu alanda örnek içerik metinleri bulunmaktadır. CSS özellikleriyle bu metinler arasında
+                <strong>boşluklar</strong> (line-height) ve hizalamalar (text-align) düzenlenebilir.
+            </p>
+            <p>Önce CSS ile kutuları / alanları yan yana getirmeyi, ardından alt alta yerleştirmeyi öğrendik. Şimdi ise
+                CSS seçicilerini kullanarak grup ve hiyerarşik seçimler yapmayı göreceğiz.</p>
+        </main>
 
-        <h2>Öğrenme Hedeflerim</h2>
-        <ol>
-            <li>HTML temellerini öğrenmek</li>
-            <li>CSS ile sayfa tasarlamak</li>
-            <li>JavaScript ile etkileşim eklemek</li>
-            <li>ASP.NET Core ile dinamik site geliştirmek</li>
-        </ol>
+        <!-- Sağ: Yan Menü / Bilgi -->
+        <aside>
+            <h2>Yan Menü / Bilgi</h2>
+            <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik (width), yükseklik (height), kenar boşlukları
+                (margin/padding) ve kenarlık (border) özelliklerini kullanarak düzenleyebiliriz.</p>
+            <p>Öğrendiklerimizi hiyerarşik ve grup seçicilerle uygulayıp farklı bölümlere stil verebiliriz.</p>
+        </aside>
+    </div>
 
-        <h2>Faydalı Bağlantılar</h2>
-        <p>Aşağıdaki kaynaklar web geliştirme öğrenirken faydalı olabilir:</p>
-        <ul>
-            <li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
-            <li><a href="https://www.w3schools.com">W3Schools</a></li>
-            <li><a href="https://github.com">GitHub</a></li>
-        </ul>
-    </main>
-
-    <hr>
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Hacı Osman Cingöz | Web Programlama Dersi</p>
+        <p>&copy; 2026 CSS Temel Örnek. Bu sayfa basit bir HTML+CSS alıştırmasıdır.</p>
     </footer>
 
 </body>
+
 </html>
