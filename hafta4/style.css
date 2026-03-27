@@ -309,6 +309,7 @@ body {
 
 .btn-box1 {
     background-color: #3b82f6;
+    align-self: center;
 }
 
 .btn-box1:hover {
@@ -317,6 +318,7 @@ body {
 
 .btn-box2 {
     background-color: #22c55e;
+    align-self: center;
 }
 
 .btn-box2:hover {
@@ -325,6 +327,7 @@ body {
 
 .btn-box3 {
     background-color: #f59e0b;
+    align-self: center;
 }
 
 .btn-box3:hover {
