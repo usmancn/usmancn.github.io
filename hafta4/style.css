@@ -235,6 +235,11 @@ body {
     padding: 0.5rem;
 }
 
+/* Kutu içindeki butonları ortala (align-self: flex-start override) */
+.grow-box .btn {
+    align-self: center;
+}
+
 .grow-box strong {
     font-size: 0.9rem;
 }
