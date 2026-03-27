@@ -1,0 +1,320 @@
+/* =============================================
+   Flexbox Ödevi – Style.css
+   Gereksinimler karşılanan özellikler:
+   ✅ Ana yapı 100vh
+   ✅ flex-direction: column (wrapper)
+   ✅ flex-direction: row (hero, grow-container)
+   ✅ justify-content: space-between (navbar, hero)
+   ✅ justify-content: center (footer)
+   ✅ justify-content: flex-start (cards-container)
+   ✅ align-items: center (navbar)
+   ✅ align-items: stretch (hero, grow-container)
+   ✅ flex-wrap: wrap (cards-container)
+   ✅ flex-grow: 1, 2, 1 (grow-box)
+   ✅ height değerleri vh ile verildi
+   ============================================= */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* ========================
+   ANA WRAPPER – flex column, 100vh
+   ======================== */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    /* dikey yerleşim */
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ========================
+   1) NAVBAR – height: 10vh
+   justify-content: space-between
+   align-items: center
+   ======================== */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Logo sol, linkler sağ */
+    align-items: center;
+    /* Dikeyde ortala */
+    height: 10vh;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dde1e7;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2d3748;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+    color: #5a7cf8;
+}
+
+/* ========================
+   2) HERO – height: 30vh
+   flex-direction: row
+   justify-content: space-between
+   align-items: stretch
+   ======================== */
+.hero {
+    display: flex;
+    flex-direction: row;
+    /* İki kolon yan yana */
+    justify-content: space-between;
+    align-items: stretch;
+    /* Görsel kutu yükseklikte esnesin */
+    height: 30vh;
+    background: linear-gradient(135deg, #eef2ff, #f8f5ff);
+    padding: 1rem 2rem;
+    gap: 1.5rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.6rem;
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 1.5rem;
+    color: #2d3748;
+}
+
+.hero-text p {
+    font-size: 0.9rem;
+    color: #666;
+    max-width: 400px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+}
+
+.placeholder-img {
+    width: 100%;
+    background-color: #dde3f0;
+    border: 2px dashed #a0aec0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #718096;
+}
+
+/* ========================
+   3) KARTLAR BÖLÜMÜ – height: 30vh
+   display: flex
+   flex-wrap: wrap
+   gap kullanımı
+   ======================== */
+.cards-section {
+    height: 30vh;
+    background-color: #fafbfc;
+    padding: 0.6rem 2rem 0.4rem;
+    border-top: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Sığmazsa alt satıra geç */
+    gap: 0.6rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dde1e7;
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    min-width: 130px;
+    flex: 1 1 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.card h3 {
+    font-size: 0.85rem;
+    color: #2d3748;
+}
+
+.card p {
+    font-size: 0.75rem;
+    color: #718096;
+    flex-grow: 1;
+}
+
+/* ========================
+   4) FLEX GROW – height: 20vh
+   3 kutu: flex-grow 1, 2, 1
+   align-items: stretch
+   ======================== */
+.flex-grow-section {
+    height: 20vh;
+    background-color: #f7f9fc;
+    padding: 0.6rem 2rem 0.4rem;
+    border-top: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.grow-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    /* Kutuların yüksekliği esnesin */
+    gap: 0.6rem;
+    height: calc(20vh - 2.5rem);
+}
+
+.grow-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+}
+
+.grow-box strong {
+    font-size: 0.9rem;
+}
+
+.grow-box span {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.box1 {
+    flex-grow: 1;
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.box2 {
+    flex-grow: 2;
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+/* 2x geniş */
+.box3 {
+    flex-grow: 1;
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+/* ========================
+   5) FOOTER – height: 10vh
+   justify-content: center
+   align-items: center
+   ======================== */
+.footer {
+    display: flex;
+    justify-content: center;
+    /* Yatayda ortala */
+    align-items: center;
+    /* Dikeyde ortala */
+    height: 10vh;
+    background-color: #edf2f7;
+    border-top: 1px solid #dde1e7;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* ========================
+   BUTONLAR
+   ======================== */
+.btn {
+    display: inline-block;
+    padding: 0.45rem 1.1rem;
+    background-color: #5a7cf8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: flex-start;
+}
+
+.btn:hover {
+    background-color: #3a5bd9;
+}
+
+.btn-card {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.75rem;
+    align-self: flex-start;
+}
+
+.btn-box1 {
+    background-color: #3b82f6;
+}
+
+.btn-box1:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-box2 {
+    background-color: #22c55e;
+}
+
+.btn-box2:hover {
+    background-color: #16a34a;
+}
+
+.btn-box3 {
+    background-color: #f59e0b;
+}
+
+.btn-box3:hover {
+    background-color: #d97706;
+}
