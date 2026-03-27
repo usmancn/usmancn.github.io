@@ -94,7 +94,7 @@ body {
     justify-content: space-between;
     align-items: stretch;
     /* Görsel kutu yükseklikte esnesin */
-    height: 30vh;
+    height: 25vh;
     background: linear-gradient(135deg, #eef2ff, #f8f5ff);
     padding: 1rem 2rem;
     gap: 1.5rem;
@@ -140,7 +140,7 @@ body {
    gap kullanımı
    ======================== */
 .cards-section {
-    height: 30vh;
+    height: 25vh;
     background-color: #fafbfc;
     padding: 0.6rem 2rem 0.4rem;
     border-top: 1px solid #e2e8f0;
@@ -192,7 +192,7 @@ body {
    align-items: stretch
    ======================== */
 .flex-grow-section {
-    height: 20vh;
+    height: 15vh;
     background-color: #f7f9fc;
     padding: 0.6rem 2rem 0.4rem;
     border-top: 1px solid #e2e8f0;
@@ -221,7 +221,7 @@ body {
     align-items: stretch;
     /* Kutuların yüksekliği esnesin */
     gap: 0.6rem;
-    height: calc(20vh - 2.5rem);
+    height: calc(15vh - 2.5rem);
 }
 
 .grow-box {
@@ -315,6 +315,8 @@ body {
 .btn-box1 {
     background-color: #3b82f6;
     align-self: center;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.75rem;
 }
 
 .btn-box1:hover {
@@ -324,6 +326,8 @@ body {
 .btn-box2 {
     background-color: #22c55e;
     align-self: center;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.75rem;
 }
 
 .btn-box2:hover {
@@ -333,6 +337,8 @@ body {
 .btn-box3 {
     background-color: #f59e0b;
     align-self: center;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.75rem;
 }
 
 .btn-box3:hover {
