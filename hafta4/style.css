@@ -125,16 +125,12 @@ body {
     align-items: stretch;
 }
 
-.placeholder-img {
+.hero-img {
     width: 100%;
-    background-color: #dde3f0;
-    border: 2px dashed #a0aec0;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: #718096;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
 }
 
 /* ========================
@@ -201,6 +197,22 @@ body {
     padding: 0.6rem 2rem 0.4rem;
     border-top: 1px solid #e2e8f0;
     overflow: hidden;
+}
+
+.flex-grow-section--plain {
+    background-color: #f0f4ff;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: #3730a3;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    vertical-align: middle;
+    margin-left: 0.4rem;
 }
 
 .grow-container {
@@ -317,4 +329,29 @@ body {
 
 .btn-box3:hover {
     background-color: #d97706;
+}
+
+/* ========================
+   TOAST BİLDİRİMİ
+   ======================== */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background-color: #2d3748;
+    color: #fff;
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+    white-space: nowrap;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
