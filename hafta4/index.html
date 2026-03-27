@@ -28,12 +28,10 @@
             <div class="hero-text">
                 <h1>Hero Başlık</h1>
                 <p>Açıklama metni buraya gelir. Flexbox ile sol ve sağ bölüm yan yana hizalanmıştır.</p>
-                <button class="btn">Buton</button>
+                <button class="btn" onclick="showToast('Hemen Başla! 🚀')">Buton</button>
             </div>
             <div class="hero-image">
-                <div class="placeholder-img">
-                    <span>📷 Görsel</span>
-                </div>
+                <img src="hero.png" alt="Hero Görsel" class="hero-img">
             </div>
         </section>
 
@@ -44,32 +42,32 @@
                 <div class="card">
                     <h3>Kart Başlığı</h3>
                     <p>Kısa açıklama metni.</p>
-                    <button class="btn btn-card">Buton</button>
+                    <button class="btn btn-card" onclick="showToast('Kart 1 tıklandı! 🃏')">Buton</button>
                 </div>
                 <div class="card">
                     <h3>Kart Başlığı</h3>
                     <p>Kısa açıklama metni.</p>
-                    <button class="btn btn-card">Buton</button>
+                    <button class="btn btn-card" onclick="showToast('Kart 2 tıklandı! 🃏')">Buton</button>
                 </div>
                 <div class="card">
                     <h3>Kart Başlığı</h3>
                     <p>Kısa açıklama metni.</p>
-                    <button class="btn btn-card">Buton</button>
+                    <button class="btn btn-card" onclick="showToast('Kart 3 tıklandı! 🃏')">Buton</button>
                 </div>
                 <div class="card">
                     <h3>Kart Başlığı</h3>
                     <p>Kısa açıklama metni.</p>
-                    <button class="btn btn-card">Buton</button>
+                    <button class="btn btn-card" onclick="showToast('Kart 4 tıklandı! 🃏')">Buton</button>
                 </div>
                 <div class="card">
                     <h3>Kart Başlığı</h3>
                     <p>Kısa açıklama metni.</p>
-                    <button class="btn btn-card">Buton</button>
+                    <button class="btn btn-card" onclick="showToast('Kart 5 tıklandı! 🃏')">Buton</button>
                 </div>
                 <div class="card">
                     <h3>Kart Başlığı</h3>
                     <p>Kısa açıklama metni.</p>
-                    <button class="btn btn-card">Buton</button>
+                    <button class="btn btn-card" onclick="showToast('Kart 6 tıklandı! 🃏')">Buton</button>
                 </div>
             </div>
         </section>
@@ -81,17 +79,36 @@
                 <div class="grow-box box1">
                     <strong>1 Kutu</strong>
                     <span>flex-grow: 1</span>
-                    <button class="btn btn-box1">Buton</button>
+                    <button class="btn btn-box1" onclick="showToast('1. Kutu – flex-grow: 1 📦')">Buton</button>
                 </div>
                 <div class="grow-box box2">
                     <strong>2 Kutu</strong>
                     <span>flex-grow: 2</span>
-                    <button class="btn btn-box2">Buton</button>
+                    <button class="btn btn-box2" onclick="showToast('2. Kutu – flex-grow: 2 📦')">Buton</button>
                 </div>
                 <div class="grow-box box3">
                     <strong>3 Kutu</strong>
                     <span>flex-grow: 1</span>
-                    <button class="btn btn-box3">Buton</button>
+                    <button class="btn btn-box3" onclick="showToast('3. Kutu – flex-grow: 1 📦')">Buton</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4b) FLEX GROW UYGULAMA – Butonsuz | height: 20vh -->
+        <section class="flex-grow-section flex-grow-section--plain">
+            <h2 class="section-title">Flex Grow Uygulama <span class="badge">butonsuz</span></h2>
+            <div class="grow-container">
+                <div class="grow-box box1">
+                    <strong>1 Kutu</strong>
+                    <span>flex-grow: 1</span>
+                </div>
+                <div class="grow-box box2">
+                    <strong>2 Kutu</strong>
+                    <span>flex-grow: 2</span>
+                </div>
+                <div class="grow-box box3">
+                    <strong>3 Kutu</strong>
+                    <span>flex-grow: 1</span>
                 </div>
             </div>
         </section>
@@ -102,6 +119,18 @@
         </footer>
 
     </div>
+
+    <!-- Toast Bildirimi -->
+    <div id="toast" class="toast"></div>
+
+    <script>
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+    </script>
 </body>
 
 </html>
