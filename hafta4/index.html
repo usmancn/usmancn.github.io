@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Ödevi – Hafta 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Ana Wrapper: flex-direction column, height 100vh -->
+    <div class="wrapper">
+
+        <!-- 1) NAVBAR: Solda Logo, Sağda 4 Link | height: 10vh -->
+        <nav class="navbar">
+            <span class="logo">LOGO</span>
+            <ul class="nav-links">
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Hakkında</a></li>
+                <li><a href="#">Dersler</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </nav>
+
+        <!-- 2) HERO: İki Kolon | height: 30vh -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Hero Başlık</h1>
+                <p>Açıklama metni buraya gelir. Flexbox ile sol ve sağ bölüm yan yana hizalanmıştır.</p>
+                <button class="btn">Buton</button>
+            </div>
+            <div class="hero-image">
+                <div class="placeholder-img">
+                    <span>📷 Görsel</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3) KARTLAR BÖLÜMÜ: 6 Kart, flex-wrap | height: 30vh -->
+        <section class="cards-section">
+            <h2 class="section-title">Kartlar Bölümü</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama metni.</p>
+                    <button class="btn btn-card">Buton</button>
+                </div>
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama metni.</p>
+                    <button class="btn btn-card">Buton</button>
+                </div>
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama metni.</p>
+                    <button class="btn btn-card">Buton</button>
+                </div>
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama metni.</p>
+                    <button class="btn btn-card">Buton</button>
+                </div>
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama metni.</p>
+                    <button class="btn btn-card">Buton</button>
+                </div>
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama metni.</p>
+                    <button class="btn btn-card">Buton</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4) FLEX GROW UYGULAMA: 3 Kutu (1-2-1) | height: 20vh -->
+        <section class="flex-grow-section">
+            <h2 class="section-title">Flex Grow Uygulama</h2>
+            <div class="grow-container">
+                <div class="grow-box box1">
+                    <strong>1 Kutu</strong>
+                    <span>flex-grow: 1</span>
+                    <button class="btn btn-box1">Buton</button>
+                </div>
+                <div class="grow-box box2">
+                    <strong>2 Kutu</strong>
+                    <span>flex-grow: 2</span>
+                    <button class="btn btn-box2">Buton</button>
+                </div>
+                <div class="grow-box box3">
+                    <strong>3 Kutu</strong>
+                    <span>flex-grow: 1</span>
+                    <button class="btn btn-box3">Buton</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5) FOOTER | height: 10vh -->
+        <footer class="footer">
+            <p>© 2026 - Temel Flexbox Örneği</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
