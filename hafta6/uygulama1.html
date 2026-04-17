@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 6 - Uygulama 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <h2>Uygulama-1</h2>
+        <p>Kullanıcı web sayfasında form aracılığıyla Ad Soyad , Vize notu ve Final notunu girecek (input type text), ortalama hesaplayıp(vize %40, final %60) harf notuna çevirecek ve geçti kaldı yazacak(durum>=50 ise geçti). Bu uygulama için HTML+CSS+Javascript kodlarını içeren uygulamayı gerçekleştirin.</p>
+        
+        <div class="card">
+            <h3>Öğrenci Not Hesaplama</h3>
+            <form id="notForm">
+                <input type="text" id="adSoyad" placeholder="Ad Soyadınızı giriniz..." required>
+                <input type="number" id="vizeNot" placeholder="Vize Notu" required min="0" max="100">
+                <input type="number" id="finalNot" placeholder="Final Notu" required min="0" max="100">
+                <button type="button" class="btn-gray" onclick="hesaplaNot()">Hesapla</button>
+            </form>
+            
+            <div id="notSonuc" class="sonuc-kutusu gray-box" style="display: none;">
+                <h4 id="sonucAd"></h4>
+                <p>Ortalama: <span id="sonucOrtalama"></span></p>
+                <p>Harf Notu: <span id="sonucHarf"></span></p>
+                <p>Durum: <span id="sonucDurum"></span></p>
+            </div>
+        </div>
+
+        <div class="bt-nav mt-4">
+            <button onclick="window.location.href='../index.html'" class="btn-gray" style="margin-bottom: 10px;">Ana Sayfaya Dön</button>
+            <button onclick="window.location.href='uygulama2.html'" class="btn-primary">Uygulama 2'ye Git</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
