@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 6 - Uygulama 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h2>Uygulama-2</h2>
+        <p>Birim Dönüştürücü Uygulaması: Farklı mühendislik birimlerini (örneğin; Sıcaklık: Celsius-Fahrenheit-Kelvin veya Uzunluk: Metre-Kilometre-Mil) birbirine dönüştüren bir uygulama geliştirilecektir.</p>
+        
+        <div class="card converter-card">
+            <h3 class="converter-title">Birim Dönüştürücü</h3>
+            <form id="birimForm">
+                <div class="form-group">
+                    <label for="deger">Değer Giriniz:</label>
+                    <input type="number" id="deger" placeholder="Değer" required>
+                </div>
+                
+                <div class="form-group mt-2">
+                    <label for="donusumTipi">Dönüşüm Tipi:</label>
+                    <select id="donusumTipi">
+                        <option value="c2f">Celsius -> Fahrenheit</option>
+                        <option value="m2km">Metre -> Kilometre</option>
+                        <option value="kg2g">Kilogram -> Gram</option>
+                        <option value="f2c">Fahrenheit -> Celsius</option>
+                        <option value="c2k">Celsius -> Kelvin</option>
+                        <option value="k2c">Kelvin -> Celsius</option>
+                        <option value="km2m">Kilometre -> Metre</option>
+                        <option value="m2mil">Metre -> Mil</option>
+                        <option value="g2kg">Gram -> Kilogram</option>
+                    </select>
+                </div>
+                
+                <button type="button" class="btn-primary mt-2" onclick="hesaplaBirim()">Hesapla</button>
+            </form>
+            
+            <div id="birimSonuc" class="sonuc-kutusu green-box" style="display: none;">
+                <strong>Sonuç: <span id="sonucDeger"></span></strong>
+            </div>
+        </div>
+
+        <div class="bt-nav mt-4">
+            <button onclick="window.location.href='../index.html'" class="btn-gray" style="margin-bottom: 10px;">Ana Sayfaya Dön</button>
+            <button onclick="window.location.href='uygulama1.html'" class="btn-primary">Uygulama 1'e Git</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
