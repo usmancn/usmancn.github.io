@@ -1,0 +1,201 @@
+/* hafta7.css - Bootstrap üzerine ek stiller */
+
+/* Dark tema değişkenleri */
+body.dark-theme {
+    background-color: #1a1a2e !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .navbar {
+    background-color: #0f0f1a !important;
+}
+
+body.dark-theme .card {
+    background-color: #16213e !important;
+    border-color: #0f3460 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .card-text,
+body.dark-theme .text-secondary {
+    color: #a0a0b0 !important;
+}
+
+body.dark-theme .hero-section {
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%) !important;
+}
+
+body.dark-theme .info-section {
+    background-color: #16213e !important;
+}
+
+body.dark-theme .form-section {
+    background-color: #1a1a2e !important;
+}
+
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+    background-color: #16213e !important;
+    border-color: #0f3460 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .form-control:focus,
+body.dark-theme .form-select:focus {
+    background-color: #1a1a2e !important;
+    border-color: #e94560 !important;
+    color: #e0e0e0 !important;
+    box-shadow: 0 0 0 0.25rem rgba(233, 69, 96, 0.25) !important;
+}
+
+body.dark-theme .result-area {
+    background-color: #16213e !important;
+    border-color: #0f3460 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme footer {
+    background-color: #0f0f1a !important;
+}
+
+body.dark-theme .table {
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .reason-card {
+    background-color: #16213e !important;
+    border-color: #0f3460 !important;
+}
+
+/* Hero bölümü */
+.hero-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Kart hover efekti */
+.workshop-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
+}
+
+.workshop-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Kart numarası badge */
+.card-number {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+/* Bilgi bölümü */
+.info-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.info-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.95rem;
+}
+
+.info-list-item:last-child {
+    border-bottom: none;
+}
+
+/* Sebep kartları */
+.reason-card {
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    height: 100%;
+    transition: box-shadow 0.2s ease;
+}
+
+.reason-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Form bölümü */
+.form-section {
+    padding: 60px 0;
+}
+
+/* Tema butonu */
+#temaButonu {
+    transition: all 0.3s ease;
+}
+
+/* Sonuç alanı */
+.result-area {
+    min-height: 80px;
+    transition: all 0.4s ease;
+}
+
+/* Özet kartı animasyonu */
+.ozet-kart {
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar marka */
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Kahraman başlık */
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-section {
+        padding: 50px 0;
+        min-height: auto;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+}
+
+/* Uyarı alanı */
+.alert-area {
+    display: none;
+}
+
+.alert-area.show {
+    display: block;
+    animation: fadeInUp 0.3s ease;
+}
