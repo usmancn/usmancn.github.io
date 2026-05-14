@@ -40,12 +40,13 @@ p {
 }
 
 .card {
-    border: none;
-    padding: 20px 0;
-    margin-bottom: 40px;
+    background: #18181b;
+    border: 1px solid #3f3f46;
+    padding: 28px;
+    border-radius: 10px;
     max-width: 430px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
 }
 
 .converter-card {
