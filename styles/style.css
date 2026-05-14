@@ -1,0 +1,120 @@
+/* ===== styles/style.css – Emerald Tema Form Stilleri ===== */
+
+main.contact-main {
+    display: block;
+    width: 100%;
+    max-width: 960px;
+    margin: 2rem auto 0;
+    padding: 0 1.5rem;
+}
+
+.contact-container {
+    max-width: 660px;
+    margin: 2rem auto 0;
+    padding: 2rem 2.25rem;
+    background: #18181b;
+    border: 1px solid #3f3f46;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fafafa;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.contact-container label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #d4d4d8;
+    font-size: 0.85rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 0.9rem;
+    background: #09090b;
+    border: 1px solid #3f3f46;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #fafafa;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder, textarea::placeholder { color: #52525b; }
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+select option { background: #18181b; color: #fafafa; }
+
+.radio-group, .checkbox-group {
+    background: #09090b;
+    border: 1px solid #3f3f46;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.radio-group label, .checkbox-group label {
+    display: block;
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #a1a1aa;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.radio-group label:last-child, .checkbox-group label:last-child { margin-bottom: 0; }
+
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 7px;
+    accent-color: #38bdf8;
+}
+
+input[type="file"] { padding: 6px 10px; color: #71717a; cursor: pointer; }
+
+.form-buttons { display: flex; gap: 10px; margin-top: 0.4rem; }
+
+.btn-gonder, .btn-temizle {
+    flex: 1;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: 'Inter', system-ui, sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: auto;
+    margin-bottom: 0;
+}
+
+.btn-gonder {
+    background: #38bdf8;
+    color: #020617;
+}
+.btn-gonder:hover { background: #7dd3fc; box-shadow: 0 2px 8px rgba(56,189,248,0.35); }
+
+.btn-temizle {
+    background: #27272a;
+    border: 1px solid #3f3f46;
+    color: #a1a1aa;
+}
+.btn-temizle:hover { background: #3f3f46; color: #fafafa; }

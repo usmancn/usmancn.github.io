@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB: CSS Position – Teknoloji Topluluğu Etkinliği</title>
+    <meta name="description"
+        content="CSS position: relative, absolute ve fixed özelliklerini kullanan etkileşimli duyuru kartı laboratuvar çalışması.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FIXED: Geri bağlantı (sabit, scroll'da kaybolmaz) -->
+    <a href="../index.html" class="back-link" id="back-link">← Ana Sayfaya Dön</a>
+
+    <!-- FIXED: Yardımcı menü düğmesi -->
+    <a href="#card-section" class="fixed-bar" id="helper-btn">Yardımcı Menü</a>
+
+    <!-- Kısa başlık alanı -->
+    <header class="page-header" id="top">
+        <h1>Kampüs Duyuru Kartı</h1>
+        <p>CSS Position LAB · Hafta 5</p>
+    </header>
+
+    <!-- MAIN: Card Wrapper — RELATIVE kapsayıcı -->
+    <main class="card-wrapper" id="card-section">
+
+
+        <!-- ANA DUYURU KARTI -->
+        <article class="announcement-card" id="announcement-card">
+
+            <!-- ABSOLUTE öğe 1 & 2: Dekoratif arka plan blob'ları -->
+            <div class="blob blob-purple" id="blob-purple" aria-hidden="true"></div>
+            <div class="blob blob-blue" id="blob-blue" aria-hidden="true"></div>
+
+            <!-- ABSOLUTE öğe 3: Ücretsiz rozeti -->
+            <div class="badge-free" id="badge-free" title="Bu etkinlik ücretsizdir">Ücretsiz</div>
+
+            <!-- ABSOLUTE öğe 4: Tarih rozeti -->
+            <div class="badge-date" id="badge-date" title="Etkinlik tarihi: 24 Nisan 2026">24 Nisan</div>
+
+            <!-- Kartın asıl içeriği (z-index: 1 ile blob'ların üstünde) -->
+            <div class="card-content">
+                <h2 class="card-title" id="card-title">
+                    <span>Teknoloji Topluluğu</span> Etkinliği
+                </h2>
+
+                <p class="card-description">
+                    Bu örnek sayfada amaç; CSS position özelliklerini kullanarak tek bir
+                    duyuru kartı üzerinde <strong>relative, absolute, fixed, z-index,
+                        hover, cursor</strong> ve animasyon mantığını birlikte göstermektir.
+                </p>
+
+                <!-- Etiketler -->
+                <div class="tags" id="tags-section">
+                    <span class="tag" id="tag-web">Web Geliştirme</span>
+                    <span class="tag" id="tag-ai">Yapay Zeka</span>
+                    <span class="tag" id="tag-ui">UI/UX</span>
+                    <span class="tag" id="tag-open">Herkese Açık</span>
+                </div>
+
+                <!-- Kayıt düğmesi -->
+                <a href="#" class="btn-register" id="btn-register" title="Etkinliğe kayıt ol">
+                    Hemen Kaydol
+                </a>
+            </div>
+
+            <!-- ABSOLUTE öğe 5: Konum etiketi (sürekli yukarı-aşağı float animasyonu) -->
+            <div class="label-location" id="label-location" title="Etkinlik konumu">
+                📍 Konum: Konferans Salonu
+            </div>
+
+            <!-- ABSOLUTE öğe 6: Son kayıt uyarısı -->
+            <div class="label-deadline" id="label-deadline" title="Son kayıt tarihi">
+                ⏰ Son Kayıt: 20 Nisan
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Alt bilgi / footer -->
+    <footer id="page-footer">
+        <p>2026 · <a href="../index.html">Hacı Osman Cingöz</a> · LAB Position Çalışması</p>
+    </footer>
+
+</body>
+
+</html>

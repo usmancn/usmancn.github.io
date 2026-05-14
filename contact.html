@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hacı Osman Cingöz iletişim bilgileri ve iletişim formu.">
+    <title>İletişim | Hacı Osman Cingöz</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <a href="index.html" class="back-btn">← Ana Sayfaya Dön</a>
+
+    <header>
+        <h1>İletişim</h1>
+        <p>Benimle iletişime geçebileceğiniz bilgiler</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="interests.html">İlgi Alanlarım</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <main class="contact-main">
+        <h2>İletişim Bilgilerim</h2>
+        <div class="contact-info-grid">
+            <div class="contact-info-item">
+                <span class="icon">📧</span>
+                <span class="label">E-posta</span>
+                <a href="mailto:osmancingoz@marun.edu.tr">osmancingoz@marun.edu.tr</a>
+            </div>
+            <div class="contact-info-item">
+                <span class="icon">📱</span>
+                <span class="label">Telefon</span>
+                <span class="value">+90 551 940 5295</span>
+            </div>
+            <div class="contact-info-item">
+                <span class="icon">💻</span>
+                <span class="label">GitHub</span>
+                <a href="https://github.com/usmancn" target="_blank">github.com/usmancn</a>
+            </div>
+            <div class="contact-info-item">
+                <span class="icon">🔗</span>
+                <span class="label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/osmancngz/" target="_blank">linkedin.com/in/osmancngz</a>
+            </div>
+        </div>
+
+        <h2>Sık Sorulan Sorular</h2>
+
+        <h3>Mesajlara ne kadar sürede dönüş yapıyorsunuz?</h3>
+        <p>Genellikle 24 saat içinde e-posta yoluyla dönüş yapıyorum.</p>
+
+        <h3>Projelerde iş birliğine açık mısınız?</h3>
+        <p>Evet, özellikle eğitim ve açık kaynak projelerinde iş birliklerine açığım.</p>
+
+        <p><a href="index.html">← Ana sayfaya geri dön</a></p>
+    </main>
+
+    <!-- ===== İletişim Formu (Hafta 3 Ödevi) ===== -->
+    <div class="contact-container">
+        <h2>Detaylı İletişim Formu</h2>
+
+        <form action="#" method="post">
+
+            <label for="ad-soyad">Ad Soyad:</label>
+            <input type="text" id="ad-soyad" name="ad-soyad" placeholder="Örn: Asaf Karataş">
+
+            <label for="eposta">E-posta Adresi:</label>
+            <input type="email" id="eposta" name="eposta" placeholder="ornek@mail.com">
+
+            <label for="sifre">Başvuru Takip Şifresi:</label>
+            <input type="password" id="sifre" name="sifre" placeholder="Şifrenizi girin">
+
+            <label>İletişim Tercihi:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="iletisim-tercihi" value="eposta" checked> Bana e-posta ile
+                    ulaşın</label>
+                <label><input type="radio" name="iletisim-tercihi" value="telefon"> Bana telefonla ulaşın</label>
+            </div>
+
+            <label>İlgi Alanları / Yetenekler:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="ilgi" value="html"> HTML</label>
+                <label><input type="checkbox" name="ilgi" value="css"> CSS</label>
+                <label><input type="checkbox" name="ilgi" value="algoritma"> Algoritma</label>
+            </div>
+
+            <label for="konu">Konu:</label>
+            <select id="konu" name="konu">
+                <option value="">Lütfen bir konu seçin...</option>
+                <option value="is-teklifi">İş Teklifi</option>
+                <option value="soru">Soru</option>
+                <option value="geri-bildirim">Geri Bildirim</option>
+            </select>
+
+            <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+            <input type="file" id="dosya" name="dosya">
+
+            <label for="mesaj">Mesajınız:</label>
+            <textarea id="mesaj" name="mesaj" rows="5"
+                placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+
+            <div class="form-buttons">
+                <button type="submit" class="btn-gonder">Gönder</button>
+                <button type="reset" class="btn-temizle">Temizle</button>
+            </div>
+
+        </form>
+    </div>
+
+    <hr>
+    <footer>
+        <p>© 2026 Hacı Osman Cingöz | Web Programlama Dersi</p>
+    </footer>
+
+</body>
+
+</html>

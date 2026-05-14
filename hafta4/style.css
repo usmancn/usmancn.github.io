@@ -1,0 +1,420 @@
+/* =============================================
+   Flexbox Ödevi – Style.css – Koyu Tema
+   Gereksinimler karşılanan özellikler:
+   ✅ Ana yapı 100vh
+   ✅ flex-direction: column (wrapper)
+   ✅ flex-direction: row (hero, grow-container)
+   ✅ justify-content: space-between (navbar, hero)
+   ✅ justify-content: center (footer)
+   ✅ justify-content: flex-start (cards-container)
+   ✅ align-items: center (navbar)
+   ✅ align-items: stretch (hero, grow-container)
+   ✅ flex-wrap: wrap (cards-container)
+   ✅ flex-grow: 1, 2, 1 (grow-box)
+   ✅ height değerleri vh ile verildi
+   ============================================= */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background-color: #020617;
+    color: #f1f5f9;
+}
+
+/* === Ana Sayfaya Dön (fixed) === */
+.back-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background: #0f172a;
+    border: 1.5px solid #38bdf8;
+    color: #38bdf8;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    z-index: 9999;
+    transition: all 0.2s ease;
+    font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: 0.01em;
+    box-shadow: 0 2px 12px rgba(56,189,248,0.25);
+}
+
+.back-link:hover {
+    background: #38bdf8;
+    color: #020617;
+    box-shadow: 0 4px 20px rgba(56,189,248,0.45);
+}
+
+/* ========================
+   ANA WRAPPER – flex column, 100vh
+   ======================== */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    /* dikey yerleşim */
+    height: 100vh;
+    width: 100%;
+    /* overflow:hidden kaldırıldı – fixed .back-link görünsün */
+}
+
+/* ========================
+   1) NAVBAR – height: 10vh
+   justify-content: space-between
+   align-items: center
+   ======================== */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background: rgba(15, 23, 42, 0.98);
+    border-bottom: 1px solid #334155;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #e6edf3;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #7d8590;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+    color: #7dd3fc;
+}
+
+/* ========================
+   2) HERO – height: 30vh
+   flex-direction: row
+   justify-content: space-between
+   align-items: stretch
+   ======================== */
+.hero {
+    display: flex;
+    flex-direction: row;
+    /* İki kolon yan yana */
+    justify-content: space-between;
+    align-items: stretch;
+    /* Görsel kutu yükseklikte esnesin */
+    height: 25vh;
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 1rem 2rem;
+    gap: 1.5rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.6rem;
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 1.4rem;
+    color: #e6edf3;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 0.87rem;
+    color: #7d8590;
+    max-width: 400px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    border: 1px solid rgba(124, 58, 237, 0.25);
+}
+
+/* ========================
+   3) KARTLAR BÖLÜMÜ – height: 30vh
+   display: flex
+   flex-wrap: wrap
+   gap kullanımı
+   ======================== */
+.cards-section {
+    height: 25vh;
+    background-color: #161b22;
+    padding: 0.6rem 2rem 0.4rem;
+    border-top: 1px solid #30363d;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #8b949e;
+    margin-bottom: 0.5rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Sığmazsa alt satıra geç */
+    gap: 0.6rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card {
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    min-width: 130px;
+    flex: 1 1 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    transition: border-color 0.2s;
+}
+
+.card:hover {
+    border-color: #2d7dd2;
+}
+
+.card h3 {
+    font-size: 0.85rem;
+    color: #e6edf3;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 0.75rem;
+    color: #7d8590;
+    flex-grow: 1;
+}
+
+/* ========================
+   4) FLEX GROW – height: 20vh
+   3 kutu: flex-grow 1, 2, 1
+   align-items: stretch
+   ======================== */
+.flex-grow-section {
+    height: 15vh;
+    background-color: #161b22;
+    padding: 0.6rem 2rem 0.4rem;
+    border-top: 1px solid #30363d;
+    overflow: hidden;
+}
+
+.flex-grow-section--plain {
+    background-color: #1c2128;
+}
+
+.badge {
+    display: inline-block;
+    background: #21262d;
+    color: #8b949e;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+    border: 1px solid #30363d;
+}
+
+.grow-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    /* Kutuların yüksekliği esnesin */
+    gap: 0.6rem;
+    height: calc(15vh - 2.5rem);
+}
+
+.grow-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grow-box:hover {
+    transform: scale(1.02);
+}
+
+/* Kutu içindeki butonları ortala */
+.grow-box .btn {
+    align-self: center;
+}
+
+.grow-box strong {
+    font-size: 0.9rem;
+}
+
+.grow-box span {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+.box1 {
+    flex-grow: 1;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    color: #79c0ff;
+}
+
+.box2 {
+    flex-grow: 2;
+    background: rgba(63, 185, 80, 0.08);
+    border: 1px solid rgba(63, 185, 80, 0.25);
+    color: #56d364;
+}
+
+/* 2x geniş */
+.box3 {
+    flex-grow: 1;
+    background: rgba(210, 153, 34, 0.08);
+    border: 1px solid rgba(210, 153, 34, 0.25);
+    color: #e3b341;
+}
+
+/* ========================
+   5) FOOTER – height: 10vh
+   justify-content: center
+   align-items: center
+   ======================== */
+.footer {
+    display: flex;
+    justify-content: center;
+    /* Yatayda ortala */
+    align-items: center;
+    /* Dikeyde ortala */
+    height: 10vh;
+    background: #161b22;
+    border-top: 1px solid #30363d;
+    font-size: 0.85rem;
+    color: #484f58;
+}
+
+/* ========================
+   BUTONLAR
+   ======================== */
+.btn {
+    display: inline-block;
+    padding: 0.42rem 1rem;
+    background: #2d7dd2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    align-self: flex-start;
+}
+
+.btn:hover {
+    background: #1a6abf;
+}
+
+.btn-card {
+    padding: 0.28rem 0.65rem;
+    font-size: 0.75rem;
+    align-self: flex-start;
+}
+
+.btn-box1 {
+    background: #1d4ed8;
+    align-self: center;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.75rem;
+}
+
+.btn-box1:hover {
+    background: #1e40af;
+}
+
+.btn-box2 {
+    background: #16a34a;
+    align-self: center;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.75rem;
+}
+
+.btn-box2:hover {
+    background: #15803d;
+}
+
+.btn-box3 {
+    background: #d97706;
+    align-self: center;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.75rem;
+}
+
+.btn-box3:hover {
+    background: #b45309;
+}
+
+/* ========================
+   TOAST BİLDİRİMİ
+   ======================== */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #21262d;
+    border: 1px solid #30363d;
+    color: #e6edf3;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    font-size: 0.87rem;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}

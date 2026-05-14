@@ -1,0 +1,208 @@
+/* =============================================
+   Hafta 2 – CSS Temel Ödevi – style.css
+   Profesyonel koyu tema.
+   Ödev gereksinimleri tamamen korunmuştur:
+   ✅ display, width, height, margin, padding, border
+   ✅ Hiyerarşik seçiciler (nav ul, nav ul li, nav ul li a,
+      header p, main h2, aside h2, .content p, footer p)
+   ✅ Grup seçici (h1, h2, p)
+   ✅ Sınıf seçici (.content, .logo)
+   ============================================= */
+
+/* ===== Genel Sıfırlama ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #020617;
+    color: #f1f5f9;
+}
+
+/* ===== ANA SAYFAYA DÖN – hafta7 tarzı (fixed) ===== */
+.h2-back-link {
+    position: fixed;
+    top: 3.5rem;
+    left: 1.25rem;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid #38bdf8;
+    color: #7dd3fc;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 9999;
+    transition: all 0.2s ease;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.h2-back-link:hover {
+    background: #0f172a;
+    color: #f1f5f9;
+    border-color: #38bdf8;
+    box-shadow: 0 0 12px rgba(56,189,248,0.3);
+    text-decoration: none;
+}
+
+/* ===== Navigasyon ===== */
+nav {
+    display: block;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    padding: 12px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+nav .logo {
+    font-weight: 600;
+    font-size: 15px;
+    margin-right: 20px;
+    color: #f1f5f9;
+}
+
+/* Hiyerarşik seçici 1: nav ul */
+nav ul {
+    list-style: none;
+    display: inline;
+    float: right;
+}
+
+/* Hiyerarşik seçici 2: nav ul li */
+nav ul li {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* Hiyerarşik seçici 3: nav ul li a */
+nav ul li a {
+    text-decoration: none;
+    color: #fafafa;
+    background-color: #27272a;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    border: 1px solid #3f3f46;
+    transition: all 0.2s;
+}
+
+/* Hover efekti */
+nav ul li a:hover {
+    background-color: #1e293b;
+    color: #38bdf8;
+    border-color: #38bdf8;
+}
+
+/* ===== Header Alanı ===== */
+header {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    padding: 20px 25px;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #8b949e;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* Hiyerarşik seçici 4: header p */
+header p {
+    font-size: 14px;
+    color: #7d8590;
+    line-height: 1.6;
+    text-align: left;
+}
+
+header p a {
+    color: #2d7dd2;
+    text-decoration: underline;
+}
+
+/* ===== İki Sütunlu İçerik Alanı ===== */
+.content {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    display: block;
+    overflow: hidden;
+}
+
+/* Sol Sütun: main */
+main {
+    display: inline-block;
+    vertical-align: top;
+    width: 58%;
+    background-color: #18181b;
+    border: 2px solid #3f3f46;
+    padding: 20px;
+    margin-right: 2%;
+    border-radius: 8px;
+}
+
+/* Sağ Sütun: aside */
+aside {
+    display: inline-block;
+    vertical-align: top;
+    width: 38%;
+    background-color: #18181b;
+    border: 2px solid #27272a;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Grup seçici: h1, h2, p */
+h1,
+h2,
+p {
+    margin-bottom: 10px;
+}
+
+/* Hiyerarşik seçici 5: main h2 ve aside h2 */
+main h2 {
+    font-size: 18px;
+    color: #38bdf8;
+    text-align: left;
+    line-height: 1.4;
+}
+
+aside h2 {
+    font-size: 18px;
+    color: #7dd3fc;
+    text-align: left;
+    line-height: 1.4;
+}
+
+/* Hiyerarşik seçici 6: .content p */
+.content p {
+    font-size: 14px;
+    color: #7d8590;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* ===== Footer ===== */
+footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #334155;
+}
+
+/* Hiyerarşik seçici 7: footer p */
+footer p {
+    font-size: 12px;
+    color: #484f58;
+    line-height: 1.5;
+}
